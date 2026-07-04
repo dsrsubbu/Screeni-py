@@ -28,3 +28,14 @@ system-clean:
 	docker system prune --force
 
 rebuild: stop-container remove-container build system-clean
+
+# Local run helpers (run-local branch)
+local-setup:
+	bash scripts/setup_run_local.sh
+
+local-run-gui:
+	bash scripts/run_local.sh --gui
+
+local-run-cli:
+	bash scripts/run_local.sh --cli
+
